@@ -1,4 +1,5 @@
 {
+  "name": "turbo-design-system",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -8,11 +9,13 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
+    "release": "turbo run build --filter=docs^... && changeset publish",
+    "generate": "plop"
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.2",
     "eslint": "^8.48.0",
+    "plop": "^4.0.0",
     "prettier": "^3.0.3",
     "tsconfig": "workspace:*",
     "turbo": "latest"

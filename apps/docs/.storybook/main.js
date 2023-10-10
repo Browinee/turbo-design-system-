@@ -10,6 +10,9 @@ const config = {
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
     getAbsolutePath("@storybook/addon-docs"),
+    getAbsolutePath("@storybook/addon-a11y"),
+    getAbsolutePath("storybook-addon-theme-switcher"),
+    getAbsolutePath("@storybook/addon-interactions"),
   ],
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
@@ -33,9 +36,12 @@ const config = {
       },
     };
   },
-
   docs: {
     autodocs: true,
+  },
+  previewBody: (body) => `${body}`,
+  features: {
+    storyStoreV7: true,
   },
 };
 
